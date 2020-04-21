@@ -6,7 +6,7 @@ shinyServer(function(input, output) {
   
   output$treedist <- renderPlot({
     if(input$dist=='a'){
-     p1 <- ggplot(trees, aes(x=Girth)) + 
+     p1 <- ggplot(trees, aes(x=Girth)) + ggtitle("Histogram of Girth")+
         geom_histogram(aes(y=..density..), colour="black", fill="#56B4E9")+
         geom_density(alpha=.25, fill="#FF6666") 
     }
